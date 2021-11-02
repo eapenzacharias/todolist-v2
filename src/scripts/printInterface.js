@@ -1,6 +1,6 @@
 import { getElement, createElement } from './queries.js';
 
-function subMenu() {
+const subMenu = () => {
   const menu = createElement('div');
   const editBtn = createElement('span');
   menu.className = 'sub-menu';
@@ -12,7 +12,7 @@ function subMenu() {
   menu.appendChild(editBtn);
   menu.appendChild(delBtn);
   return menu;
-}
+};
 
 function printTask(task) {
   const li = createElement('li');
