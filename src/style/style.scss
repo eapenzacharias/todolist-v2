@@ -56,6 +56,7 @@ body {
 
         input {
           margin-right: 15px;
+          cursor: pointer;
         }
 
         .task-text {
@@ -66,10 +67,12 @@ body {
 
         .task-options {
           position: absolute;
-          right: 35px;
+          right: 10px;
           font-weight: 900;
           color: $cell-color;
           transition: 0.3s;
+          cursor: pointer;
+          width: 50px;
         }
 
         .task-options:hover {
@@ -81,6 +84,7 @@ body {
           right: 15px;
           color: $cell-color;
           transition: 0.3s;
+          cursor: pointer;
         }
 
         .del-btn:hover {
@@ -91,6 +95,11 @@ body {
       .completed {
         background-color: #fcfcfc;
         color: $second-text;
+      }
+
+      .submenu {
+        padding: 0;
+        width: 30px;
       }
     }
 
@@ -104,6 +113,7 @@ body {
       color: $second-text;
       padding: 15px;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     #clear-btn:hover {

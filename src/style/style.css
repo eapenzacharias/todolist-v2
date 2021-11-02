@@ -1,9 +1,8 @@
 body .project {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   width: 100%;
   font-family: Helvetica, sans-serif;
   color: #333;
@@ -15,16 +14,15 @@ body #main {
   margin: 50px auto;
   padding: 0;
   -webkit-box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
-          box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+  box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
   font-size: 16px;
   font-weight: 300;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 body #main h1 {
@@ -39,7 +37,7 @@ body #main #task-input {
   border: none;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #7a7a7a;
   font-style: italic;
   font-size: 16px;
@@ -64,6 +62,7 @@ body #main #tasks li {
 
 body #main #tasks li input {
   margin-right: 15px;
+  cursor: pointer;
 }
 
 body #main #tasks li .task-text {
@@ -76,11 +75,13 @@ body #main #tasks li .task-text {
 
 body #main #tasks li .task-options {
   position: absolute;
-  right: 35px;
+  right: 10px;
   font-weight: 900;
   color: #b2b2b2;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
+  width: 50px;
 }
 
 body #main #tasks li .task-options:hover {
@@ -93,6 +94,7 @@ body #main #tasks li .del-btn {
   color: #b2b2b2;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 body #main #tasks li .del-btn:hover {
@@ -104,21 +106,26 @@ body #main #tasks .completed {
   color: #7a7a7a;
 }
 
+body #main #tasks .submenu {
+  padding: 0;
+  width: 30px;
+}
+
 body #main #clear-btn {
   border: none;
   background-color: #f3f1f1;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 300;
   color: #7a7a7a;
   padding: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  cursor: pointer;
 }
 
 body #main #clear-btn:hover {
   opacity: 0.7;
 }
-/*# sourceMappingURL=style.css.map */

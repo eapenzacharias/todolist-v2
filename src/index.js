@@ -1,6 +1,6 @@
 import './style/style.css';
 
-import { getElement, createElement } from './scripts/queries.js';
+import printTask from './scripts/printInterface.js';
 
 const tasks = [
   {
@@ -35,20 +35,4 @@ const tasks = [
   },
 ];
 
-function printTasks(task) {
-  const li = createElement('li');
-  const done = createElement('input');
-  done.type = 'checkbox';
-  done.checked = task.completed;
-  const description = createElement('span');
-  description.innerHTML = task.description;
-  const menu = createElement('span');
-  menu.innerHTML = '⋮';
-  menu.className = 'task-options';
-  li.appendChild(done);
-  li.appendChild(description);
-  li.appendChild(menu);
-  getElement('#tasks').appendChild(li);
-}
-
-tasks.forEach((task) => printTasks(task));
+tasks.forEach((task) => printTask(task));
