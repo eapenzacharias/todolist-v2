@@ -1,0 +1,124 @@
+body .project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+  color: #333;
+}
+
+body #main {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 0;
+  -webkit-box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+          box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+  font-size: 16px;
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body #main h1 {
+  border-bottom: 0.5px solid #b2b2b2;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 20px 10px 15px 10px;
+  margin: 0;
+}
+
+body #main #task-input {
+  border: none;
+  border-bottom: 0.2px solid #b2b2b2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #7a7a7a;
+  font-style: italic;
+  font-size: 16px;
+  padding: 15px 10px;
+  margin: 0;
+  width: 100%;
+}
+
+body #main #tasks {
+  list-style-type: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body #main #tasks li {
+  border-bottom: 0.2px solid #b2b2b2;
+  padding: 15px 10px;
+  position: relative;
+  margin: 0;
+}
+
+body #main #tasks li input {
+  margin-right: 15px;
+}
+
+body #main #tasks li .task-text {
+  min-width: 70%;
+  padding: 5px 0 2px 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+body #main #tasks li .task-options {
+  position: absolute;
+  right: 35px;
+  font-weight: 900;
+  color: #b2b2b2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #main #tasks li .task-options:hover {
+  color: #6ebefc;
+}
+
+body #main #tasks li .del-btn {
+  position: absolute;
+  right: 15px;
+  color: #b2b2b2;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #main #tasks li .del-btn:hover {
+  color: #f37171;
+}
+
+body #main #tasks .completed {
+  background-color: #fcfcfc;
+  color: #7a7a7a;
+}
+
+body #main #clear-btn {
+  border: none;
+  background-color: #f3f1f1;
+  border-bottom: 0.2px solid #b2b2b2;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 300;
+  color: #7a7a7a;
+  padding: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body #main #clear-btn:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=style.css.map */
