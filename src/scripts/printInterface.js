@@ -1,3 +1,4 @@
+import { getLocal, updateLocal } from './localStorage.js';
 import { getElement, createElement } from './queries.js';
 
 const subMenu = () => {
@@ -14,11 +15,25 @@ const subMenu = () => {
   return menu;
 };
 
-function printTask(task) {
+function printTask(task, tasks) {
   const li = createElement('li');
   const done = createElement('input');
   done.type = 'checkbox';
   done.checked = task.completed;
+  if (task.completed) {
+    li.className = 'completed';
+  }
+  done.addEventListener('change', () => {
+    const objIndex = tasks.findIndex((obj) => obj.index === task.index);
+    li.classList.toggle('completed');
+    if (done.checked) {
+      tasks[objIndex].completed = true;
+      updateLocal(tasks);
+    } else {
+      tasks[objIndex].completed = false;
+      updateLocal(tasks);
+    }
+  });
   const description = createElement('span');
   description.innerHTML = task.description;
   const menu = createElement('span');
@@ -41,4 +56,12 @@ function printTask(task) {
   getElement('#tasks').appendChild(li);
 }
 
-export default printTask;
+function printTasks(tasks) {
+  const local = getLocal();
+  if (local) {
+    tasks = local;
+  }
+  tasks.forEach((task) => printTask(task, tasks));
+}
+
+export default printTasks;
