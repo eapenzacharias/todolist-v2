@@ -1,0 +1,123 @@
+$cell-color: #b2b2b2;
+$text-color: #333;
+$second-text: #7a7a7a;
+
+body {
+  .project {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    font-family: Helvetica, sans-serif;
+    color: $text-color;
+  }
+
+  #main {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 0;
+    box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      border-bottom: 0.5px solid $cell-color;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 20px 10px 15px 10px;
+      margin: 0;
+    }
+
+    #task-input {
+      border: none;
+      border-bottom: 0.2px solid $cell-color;
+      box-sizing: border-box;
+      color: $second-text;
+      font-style: italic;
+      font-size: 16px;
+      padding: 15px 10px;
+      margin: 0;
+      width: 100%;
+    }
+
+    #tasks {
+      list-style-type: none;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      li {
+        border-bottom: 0.2px solid $cell-color;
+        padding: 15px 10px;
+        position: relative;
+        margin: 0;
+
+        input {
+          margin-right: 15px;
+          cursor: pointer;
+        }
+
+        .task-text {
+          min-width: 70%;
+          padding: 5px 0 2px 0;
+          display: inline-flex;
+        }
+
+        .task-options {
+          position: absolute;
+          right: 10px;
+          font-weight: 900;
+          color: $cell-color;
+          transition: 0.3s;
+          cursor: pointer;
+          width: 50px;
+        }
+
+        .task-options:hover {
+          color: #6ebefc;
+        }
+
+        .del-btn {
+          position: absolute;
+          right: 15px;
+          color: $cell-color;
+          transition: 0.3s;
+          cursor: pointer;
+        }
+
+        .del-btn:hover {
+          color: #f37171;
+        }
+      }
+
+      .completed {
+        background-color: #fcfcfc;
+        color: $second-text;
+      }
+
+      .submenu {
+        padding: 0;
+        width: 30px;
+      }
+    }
+
+    #clear-btn {
+      border: none;
+      background-color: #f3f1f1;
+      border-bottom: 0.2px solid $cell-color;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-weight: 300;
+      color: $second-text;
+      padding: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    #clear-btn:hover {
+      opacity: 0.7;
+    }
+  }
+}
