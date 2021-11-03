@@ -1,6 +1,6 @@
 import './style/style.css';
 
-import printTask from './scripts/printInterface.js';
+import printTasks from './scripts/printInterface.js';
 
 const tasks = [
   {
@@ -35,4 +35,4 @@ const tasks = [
   },
 ];
 
-tasks.forEach((task) => printTask(task));
+printTasks(tasks);
