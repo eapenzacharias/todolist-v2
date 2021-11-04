@@ -47,7 +47,7 @@ function deleteTask(task, tasks) {
   const objIndex = tasks.findIndex((obj) => obj.index === task.index);
   tasks.splice(objIndex, 1);
   newIndex(tasks);
-  window.location.reload();
+  return tasks;
 }
 
 export { changeStatus, editTask, deleteTask };

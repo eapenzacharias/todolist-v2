@@ -1,6 +1,6 @@
 import { getLocal } from './localStorage.js';
 import { getElement, createElement } from './queries.js';
-import { changeStatus, editTask } from './updateTasks.js';
+import { changeStatus, deleteTask, editTask } from './updateTasks.js';
 
 const subMenu = (menu, description, tasks, task) => {
   const editBtn = createElement('span');
@@ -10,8 +10,11 @@ const subMenu = (menu, description, tasks, task) => {
   delBtn.innerHTML = '&#10005;';
   delBtn.className = 'del-btn fadeInRight';
   editBtn.addEventListener('click', () => {
-    console.log('btn clicked');
     editTask(editBtn, description, tasks, task);
+  });
+  delBtn.addEventListener('click', () => {
+    tasks = deleteTask(task, tasks);
+    printTasks(tasks);
   });
   menu.appendChild(editBtn);
   menu.appendChild(delBtn);
@@ -55,7 +58,8 @@ function printTask(task, tasks) {
   getElement('#tasks').appendChild(li);
 }
 
-function printTasks(tasks) {
+function printTasks(tasks = []) {
+  getElement('#tasks').innerHTML = '';
   const local = getLocal();
   if (local) {
     tasks = local;
