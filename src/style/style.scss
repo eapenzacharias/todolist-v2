@@ -102,13 +102,17 @@ body {
           position: absolute;
           right: 35px;
           color: $cell-color;
-          transition: 0.5s;
+          transition: 0.3s;
           cursor: pointer;
           color: #3d78ab;
           transform: scale(-1, 1);
         }
         .edit-btn:hover {
           color: #0b406e;
+        }
+        .editing {
+          transform: scale(1, 1);
+          color: #0d7a1e;
         }
       }
 

@@ -1,13 +1,18 @@
-import { getLocal, updateLocal } from './localStorage.js';
+import { getLocal } from './localStorage.js';
 import { getElement, createElement } from './queries.js';
+import { changeStatus, editTask } from './updateTasks.js';
 
-const subMenu = (menu) => {
+const subMenu = (menu, description, tasks, task) => {
   const editBtn = createElement('span');
   editBtn.innerHTML = '&#9998;';
   editBtn.className = 'edit-btn';
   const delBtn = createElement('span');
   delBtn.innerHTML = '&#10005;';
   delBtn.className = 'del-btn';
+  editBtn.addEventListener('click', () => {
+    console.log('btn clicked');
+    editTask(editBtn, description, tasks, task);
+  });
   menu.appendChild(editBtn);
   menu.appendChild(delBtn);
   return menu;
@@ -22,30 +27,25 @@ function printTask(task, tasks) {
     li.className = 'completed';
   }
   done.addEventListener('change', () => {
-    const objIndex = tasks.findIndex((obj) => obj.index === task.index);
     li.classList.toggle('completed');
-    if (done.checked) {
-      tasks[objIndex].completed = true;
-      updateLocal(tasks);
-    } else {
-      tasks[objIndex].completed = false;
-      updateLocal(tasks);
-    }
+    changeStatus(done, tasks, task);
   });
   const description = createElement('span');
   description.className = 'task-text';
   description.innerHTML = task.description;
   let menu = createElement('span');
-  menu.innerHTML = '⋮';
+  const menuBtn = createElement('span');
+  menuBtn.innerHTML = '⋮';
+  menu.appendChild(menuBtn);
   menu.className = 'task-options';
   let mTog = true;
-  menu.addEventListener('click', () => {
-    menu.innerHTML = '';
+  menuBtn.addEventListener('click', () => {
+    menuBtn.innerHTML = '';
     if (mTog) {
-      menu = subMenu(menu);
+      menu = subMenu(menu, description, tasks, task);
       mTog = false;
     } else {
-      menu.innerHTML = '⋮';
+      menu.appendChild(menuBtn);
       mTog = true;
     }
   });

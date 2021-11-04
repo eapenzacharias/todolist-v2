@@ -121,8 +121,8 @@ body #main #tasks li .edit-btn {
   position: absolute;
   right: 35px;
   color: #b2b2b2;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   cursor: pointer;
   color: #3d78ab;
   -webkit-transform: scale(-1, 1);
@@ -131,6 +131,12 @@ body #main #tasks li .edit-btn {
 
 body #main #tasks li .edit-btn:hover {
   color: #0b406e;
+}
+
+body #main #tasks li .editing {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  color: #0d7a1e;
 }
 
 body #main #tasks .completed {
