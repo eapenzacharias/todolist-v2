@@ -6,6 +6,8 @@
 
 Create a simple HTML list of To Do tasks using webpack to bundle JavaScript.
 
+## [Live Project](https://eapenzacharias.github.io/todolist-v2/dist)
+
 ## Built With
 
 - JavaScript, HTML, CSS
