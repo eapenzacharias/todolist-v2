@@ -1,15 +1,22 @@
-import { getLocal, updateLocal } from './localStorage.js';
+import { getLocal } from './localStorage.js';
 import { getElement, createElement } from './queries.js';
+import { changeStatus, deleteTask, editTask } from './updateTasks.js';
 
-const subMenu = () => {
-  const menu = createElement('div');
+const subMenu = (menu, description, tasks, task) => {
   const editBtn = createElement('span');
-  menu.className = 'sub-menu';
-  editBtn.innerHTML = '&#9997;';
-  editBtn.className = 'edit-btn';
+  editBtn.innerHTML = '&#9998;';
+  editBtn.className = 'edit-btn btn fadeInRight';
   const delBtn = createElement('span');
   delBtn.innerHTML = '&#10005;';
-  delBtn.className = 'del-btn';
+  delBtn.className = 'del-btn btn fadeInRight';
+  editBtn.addEventListener('click', () => {
+    editTask(editBtn, description, tasks, task);
+  });
+  delBtn.addEventListener('click', () => {
+    tasks = deleteTask(task, tasks);
+    // eslint-disable-next-line no-use-before-define
+    printTasks(tasks);
+  });
   menu.appendChild(editBtn);
   menu.appendChild(delBtn);
   return menu;
@@ -24,29 +31,25 @@ function printTask(task, tasks) {
     li.className = 'completed';
   }
   done.addEventListener('change', () => {
-    const objIndex = tasks.findIndex((obj) => obj.index === task.index);
     li.classList.toggle('completed');
-    if (done.checked) {
-      tasks[objIndex].completed = true;
-      updateLocal(tasks);
-    } else {
-      tasks[objIndex].completed = false;
-      updateLocal(tasks);
-    }
+    changeStatus(done, tasks, task);
   });
   const description = createElement('span');
+  description.className = 'task-text';
   description.innerHTML = task.description;
-  const menu = createElement('span');
-  menu.innerHTML = '⋮';
+  let menu = createElement('span');
+  const menuBtn = createElement('span');
+  menuBtn.innerHTML = '⋮';
+  menu.appendChild(menuBtn);
   menu.className = 'task-options';
   let mTog = true;
-  menu.addEventListener('click', () => {
-    menu.innerHTML = '';
+  menuBtn.addEventListener('click', () => {
     if (mTog) {
-      menu.appendChild(subMenu(menu));
+      menu = subMenu(menu, description, tasks, task);
       mTog = false;
     } else {
-      menu.innerHTML = '⋮';
+      menu.innerHTML = '';
+      menu.appendChild(menuBtn);
       mTog = true;
     }
   });
@@ -56,7 +59,8 @@ function printTask(task, tasks) {
   getElement('#tasks').appendChild(li);
 }
 
-function printTasks(tasks) {
+function printTasks(tasks = []) {
+  getElement('#tasks').innerHTML = '';
   const local = getLocal();
   if (local) {
     tasks = local;
