@@ -112,7 +112,7 @@ body #main #tasks li .btn {
 }
 
 body #main #tasks li .del-btn {
-  right: 20px;
+  right: 25px;
   color: #c14c4c;
 }
 
@@ -121,7 +121,7 @@ body #main #tasks li .del-btn:hover {
 }
 
 body #main #tasks li .edit-btn {
-  right: 45px;
+  right: 50px;
   color: #3d78ab;
 }
 
