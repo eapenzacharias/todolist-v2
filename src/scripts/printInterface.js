@@ -5,10 +5,10 @@ import { changeStatus, editTask } from './updateTasks.js';
 const subMenu = (menu, description, tasks, task) => {
   const editBtn = createElement('span');
   editBtn.innerHTML = '&#9998;';
-  editBtn.className = 'edit-btn';
+  editBtn.className = 'edit-btn fadeInRight';
   const delBtn = createElement('span');
   delBtn.innerHTML = '&#10005;';
-  delBtn.className = 'del-btn';
+  delBtn.className = 'del-btn fadeInRight';
   editBtn.addEventListener('click', () => {
     console.log('btn clicked');
     editTask(editBtn, description, tasks, task);
@@ -40,11 +40,11 @@ function printTask(task, tasks) {
   menu.className = 'task-options';
   let mTog = true;
   menuBtn.addEventListener('click', () => {
-    menuBtn.innerHTML = '';
     if (mTog) {
       menu = subMenu(menu, description, tasks, task);
       mTog = false;
     } else {
+      menu.innerHTML = '';
       menu.appendChild(menuBtn);
       mTog = true;
     }
