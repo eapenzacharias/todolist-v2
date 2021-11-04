@@ -1,9 +1,8 @@
 body .project {
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   width: 100%;
   font-family: Helvetica, sans-serif;
   color: #333;
@@ -15,16 +14,15 @@ body #main {
   margin: 50px auto;
   padding: 0;
   -webkit-box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
-          box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+  box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
   font-size: 16px;
   font-weight: 300;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 body #main h1 {
@@ -39,7 +37,7 @@ body #main #task-input {
   border: none;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: #7a7a7a;
   font-style: italic;
   font-size: 16px;
@@ -60,7 +58,6 @@ body #main #tasks li {
   padding: 15px 10px;
   position: relative;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: 0;
 }
@@ -88,33 +85,35 @@ body #main #tasks li .task-options {
   cursor: pointer;
   width: 60px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   height: 100%;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body #main #tasks li .task-options:hover {
   color: #1c9159;
 }
 
-body #main #tasks li .del-btn {
+body #main #tasks li .btn {
   position: absolute;
-  right: 20px;
   color: #b2b2b2;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   cursor: pointer;
-  color: #c14c4c;
   -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
+  animation-duration: 0.4s;
   -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+body #main #tasks li .del-btn {
+  right: 20px;
+  color: #c14c4c;
 }
 
 body #main #tasks li .del-btn:hover {
@@ -122,19 +121,8 @@ body #main #tasks li .del-btn:hover {
 }
 
 body #main #tasks li .edit-btn {
-  position: absolute;
   right: 45px;
-  color: #b2b2b2;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  cursor: pointer;
   color: #3d78ab;
-  -webkit-transform: scale(-1, 1);
-          transform: scale(-1, 1);
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-fill-mode: both;
-          animation-fill-mode: both;
 }
 
 body #main #tasks li .edit-btn:hover {
@@ -142,8 +130,6 @@ body #main #tasks li .edit-btn:hover {
 }
 
 body #main #tasks li .editing {
-  -webkit-transform: scale(1, 1);
-          transform: scale(1, 1);
   color: #0d7a1e;
 }
 
@@ -155,10 +141,9 @@ body #main #tasks .completed {
 body #main #tasks .submenu {
   padding: 0;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   position: absolute;
 }
 
@@ -166,12 +151,13 @@ body #main #tasks .submenu {
   0% {
     opacity: 0;
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -179,18 +165,19 @@ body #main #tasks .submenu {
   0% {
     opacity: 0;
     -webkit-transform: translateX(10px);
-            transform: translateX(10px);
+    transform: translateX(10px);
   }
+
   100% {
     opacity: 1;
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
 body #main #tasks .fadeInRight {
-  -webkit-animation-name: fadeInRight;
-          animation-name: fadeInRight;
+  -webkit-animation-name: fadeinright;
+  animation-name: fadeInRight;
 }
 
 body #main #clear-btn {
@@ -198,7 +185,7 @@ body #main #clear-btn {
   background-color: #f3f1f1;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 16px;
   font-weight: 300;
   color: #7a7a7a;
@@ -212,4 +199,3 @@ body #main #clear-btn:hover {
   background-color: #8e8e8e;
   color: #333;
 }
-/*# sourceMappingURL=style.css.map */

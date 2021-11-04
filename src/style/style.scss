@@ -86,36 +86,34 @@ body {
           color: #1c9159;
         }
 
-        .del-btn {
+        .btn {
           position: absolute;
-          right: 20px;
           color: $cell-color;
           transition: 0.5s;
           cursor: pointer;
-          color: #c14c4c;
           animation-duration: 0.4s;
           animation-fill-mode: both;
+        }
+
+        .del-btn {
+          right: 20px;
+          color: #c14c4c;
         }
 
         .del-btn:hover {
           color: #b01111;
         }
+
         .edit-btn {
-          position: absolute;
           right: 45px;
-          color: $cell-color;
-          transition: 0.3s;
-          cursor: pointer;
           color: #3d78ab;
-          transform: scale(-1, 1);
-          animation-duration: 0.4s;
-          animation-fill-mode: both;
         }
+
         .edit-btn:hover {
           color: #0b406e;
         }
+
         .editing {
-          transform: scale(1, 1);
           color: #0d7a1e;
         }
       }
@@ -137,11 +135,13 @@ body {
           opacity: 0;
           transform: translateX(10px);
         }
+
         100% {
           opacity: 1;
           transform: translateX(0);
         }
       }
+
       .fadeInRight {
         animation-name: fadeInRight;
       }

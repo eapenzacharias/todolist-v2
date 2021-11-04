@@ -28,7 +28,6 @@ function editTask(editBtn, description, tasks, task) {
   editBtn.classList.toggle('editing');
   if (editBtn.innerHTML === '✎') {
     editBtn.innerHTML = '&#10004;';
-    console.log('here');
     description.contentEditable = true;
   } else {
     editBtn.innerHTML = '&#9998;';

@@ -5,15 +5,16 @@ import { changeStatus, deleteTask, editTask } from './updateTasks.js';
 const subMenu = (menu, description, tasks, task) => {
   const editBtn = createElement('span');
   editBtn.innerHTML = '&#9998;';
-  editBtn.className = 'edit-btn fadeInRight';
+  editBtn.className = 'edit-btn btn fadeInRight';
   const delBtn = createElement('span');
   delBtn.innerHTML = '&#10005;';
-  delBtn.className = 'del-btn fadeInRight';
+  delBtn.className = 'del-btn btn fadeInRight';
   editBtn.addEventListener('click', () => {
     editTask(editBtn, description, tasks, task);
   });
   delBtn.addEventListener('click', () => {
     tasks = deleteTask(task, tasks);
+    // eslint-disable-next-line no-use-before-define
     printTasks(tasks);
   });
   menu.appendChild(editBtn);
