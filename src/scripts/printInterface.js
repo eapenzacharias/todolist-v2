@@ -1,11 +1,9 @@
 import { getLocal, updateLocal } from './localStorage.js';
 import { getElement, createElement } from './queries.js';
 
-const subMenu = () => {
-  const menu = createElement('div');
+const subMenu = (menu) => {
   const editBtn = createElement('span');
-  menu.className = 'sub-menu';
-  editBtn.innerHTML = '&#9997;';
+  editBtn.innerHTML = '&#9998;';
   editBtn.className = 'edit-btn';
   const delBtn = createElement('span');
   delBtn.innerHTML = '&#10005;';
@@ -35,15 +33,16 @@ function printTask(task, tasks) {
     }
   });
   const description = createElement('span');
+  description.className = 'task-text';
   description.innerHTML = task.description;
-  const menu = createElement('span');
+  let menu = createElement('span');
   menu.innerHTML = '⋮';
   menu.className = 'task-options';
   let mTog = true;
   menu.addEventListener('click', () => {
     menu.innerHTML = '';
     if (mTog) {
-      menu.appendChild(subMenu(menu));
+      menu = subMenu(menu);
       mTog = false;
     } else {
       menu.innerHTML = '⋮';

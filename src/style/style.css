@@ -1,8 +1,9 @@
 body .project {
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -ms-flex-line-pack: center;
-  align-content: center;
+      align-content: center;
   width: 100%;
   font-family: Helvetica, sans-serif;
   color: #333;
@@ -14,15 +15,16 @@ body #main {
   margin: 50px auto;
   padding: 0;
   -webkit-box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
-  box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
+          box-shadow: 0 4px 8px 0 #0003, 0 6px 20px 0 #00000030;
   font-size: 16px;
   font-weight: 300;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 body #main h1 {
@@ -37,7 +39,7 @@ body #main #task-input {
   border: none;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   color: #7a7a7a;
   font-style: italic;
   font-size: 16px;
@@ -57,48 +59,78 @@ body #main #tasks li {
   border-bottom: 0.2px solid #b2b2b2;
   padding: 15px 10px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin: 0;
 }
 
 body #main #tasks li input {
-  margin-right: 15px;
+  margin: 0 15px;
   cursor: pointer;
 }
 
 body #main #tasks li .task-text {
   min-width: 70%;
-  padding: 5px 0 2px 0;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  padding: 0 0 2px 0;
 }
 
 body #main #tasks li .task-options {
   position: absolute;
   right: 10px;
+  top: 0;
   font-weight: 900;
-  color: #b2b2b2;
+  color: #848484;
+  font-size: 20px;
   -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   cursor: pointer;
-  width: 50px;
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 body #main #tasks li .task-options:hover {
-  color: #6ebefc;
+  color: #1c9159;
 }
 
 body #main #tasks li .del-btn {
   position: absolute;
-  right: 15px;
+  right: 5px;
   color: #b2b2b2;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   cursor: pointer;
+  color: #c14c4c;
 }
 
 body #main #tasks li .del-btn:hover {
-  color: #f37171;
+  color: #b01111;
+}
+
+body #main #tasks li .edit-btn {
+  position: absolute;
+  right: 35px;
+  color: #b2b2b2;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  cursor: pointer;
+  color: #3d78ab;
+  -webkit-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+body #main #tasks li .edit-btn:hover {
+  color: #0b406e;
 }
 
 body #main #tasks .completed {
@@ -108,7 +140,12 @@ body #main #tasks .completed {
 
 body #main #tasks .submenu {
   padding: 0;
-  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  position: absolute;
 }
 
 body #main #clear-btn {
@@ -116,16 +153,18 @@ body #main #clear-btn {
   background-color: #f3f1f1;
   border-bottom: 0.2px solid #b2b2b2;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 16px;
   font-weight: 300;
   color: #7a7a7a;
   padding: 15px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   cursor: pointer;
 }
 
 body #main #clear-btn:hover {
-  opacity: 0.7;
+  background-color: #8e8e8e;
+  color: #333;
 }
+/*# sourceMappingURL=style.css.map */

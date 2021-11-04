@@ -52,43 +52,63 @@ body {
         border-bottom: 0.2px solid $cell-color;
         padding: 15px 10px;
         position: relative;
+        display: flex;
         margin: 0;
 
         input {
-          margin-right: 15px;
+          margin: 0 15px;
           cursor: pointer;
         }
 
         .task-text {
           min-width: 70%;
-          padding: 5px 0 2px 0;
-          display: inline-flex;
+          padding: 0 0 2px 0;
         }
 
         .task-options {
           position: absolute;
           right: 10px;
+          top: 0;
           font-weight: 900;
-          color: $cell-color;
-          transition: 0.3s;
+          color: #848484;
+          font-size: 20px;
+          -webkit-transition: 0.3s;
+          transition: 0.6s;
           cursor: pointer;
-          width: 50px;
+          width: 60px;
+          display: flex;
+          justify-content: end;
+          height: 100%;
+          align-items: center;
         }
 
         .task-options:hover {
-          color: #6ebefc;
+          color: #1c9159;
         }
 
         .del-btn {
           position: absolute;
-          right: 15px;
+          right: 5px;
           color: $cell-color;
-          transition: 0.3s;
+          transition: 0.5s;
           cursor: pointer;
+          color: #c14c4c;
         }
 
         .del-btn:hover {
-          color: #f37171;
+          color: #b01111;
+        }
+        .edit-btn {
+          position: absolute;
+          right: 35px;
+          color: $cell-color;
+          transition: 0.5s;
+          cursor: pointer;
+          color: #3d78ab;
+          transform: scale(-1, 1);
+        }
+        .edit-btn:hover {
+          color: #0b406e;
         }
       }
 
@@ -99,7 +119,9 @@ body {
 
       .submenu {
         padding: 0;
-        width: 30px;
+        display: flex;
+        align-content: center;
+        position: absolute;
       }
     }
 
@@ -112,12 +134,13 @@ body {
       font-weight: 300;
       color: $second-text;
       padding: 15px;
-      transition: 0.3s;
+      transition: 0.6s;
       cursor: pointer;
     }
 
     #clear-btn:hover {
-      opacity: 0.7;
+      background-color: #8e8e8e;
+      color: $text-color;
     }
   }
 }
