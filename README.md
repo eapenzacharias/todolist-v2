@@ -2,7 +2,7 @@
 
 > Build a To Do List JavaScript application
 
-![app-img](https://user-images.githubusercontent.com/49812651/139960898-a9ff7e52-c4e6-4ec7-b1b4-1dfe89019a40.png)
+![app-img](https://user-images.githubusercontent.com/49812651/140420772-e9dd4d07-b479-4d84-b54f-aed375cfd4d0.png)
 
 Create a simple HTML list of To Do tasks using webpack to bundle JavaScript.
 
