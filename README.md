@@ -1,3 +1,5 @@
+[![Maintainability](https://api.codeclimate.com/v1/badges/c86cad5485429bed3615/maintainability)](https://codeclimate.com/github/eapenzacharias/todolist-v2/maintainability) [![Linters](https://github.com/eapenzacharias/todolist-v2/actions/workflows/linters.yml/badge.svg)](https://github.com/eapenzacharias/todolist-v2/actions/workflows/linters.yml) [![CodeQL](https://github.com/eapenzacharias/todolist-v2/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/eapenzacharias/todolist-v2/actions/workflows/codeql-analysis.yml) [![NodeJS with Webpack](https://github.com/eapenzacharias/todolist-v2/actions/workflows/webpack.yml/badge.svg)](https://github.com/eapenzacharias/todolist-v2/actions/workflows/webpack.yml)
+
 # To Do list
 
 > Build a To Do List JavaScript application
